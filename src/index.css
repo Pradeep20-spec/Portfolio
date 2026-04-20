@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+  }
+
+  ::selection {
+    @apply bg-teal-500/30 text-teal-900 dark:text-teal-100;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-700 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-teal-400 dark:bg-teal-600;
+  }
+}
+
+@layer utilities {
+  @keyframes horizontalSweep {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+      opacity: 0.65;
+      filter: brightness(1);
+    }
+    35% {
+      transform: translate3d(2px, 0, 0) scale(1.1);
+      opacity: 1;
+      filter: brightness(1.2);
+    }
+    70% {
+      transform: translate3d(4px, 0, 0) scale(1.15);
+      opacity: 0.95;
+      filter: brightness(1.12);
+    }
+  }
+
+  .calendar-cell {
+    animation: horizontalSweep 5.6s ease-in-out infinite;
+    transform-origin: center;
+    will-change: transform, opacity, filter;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .calendar-cell {
+    animation: none;
+  }
+}
