@@ -14,7 +14,7 @@ const projects = [
     color: 'from-teal-500 to-cyan-500',
     featured: true,
     githubUrl: 'https://github.com/Pradeep20-spec/InterviewIQ',
-    demoUrl: 'https://pradeep20-spec.github.io/InterviewIQ/',
+    demoUrl: 'https://interview-iq-coral.vercel.app/',
   },
   {
     icon: Briefcase,
