@@ -14,7 +14,7 @@ const contactLinks = [
     icon: Linkedin,
     label: 'LinkedIn',
     value: 'linkedin.com/in/pradeep-j-b01581341',
-    href: 'https://www.linkedin.com/in/pradeep-j-b01581341/',
+    href: 'https://www.linkedin.com/in/pradeep-j-175b38404/',
     color: 'from-sky-500 to-blue-600',
     description: 'Connect with me professionally',
   },
